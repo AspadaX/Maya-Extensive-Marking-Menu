@@ -1,6 +1,8 @@
 # ExtensiveMarkingMenu_forMaya
 Wanna greater efficiency when modeling in Maya? Try this out!
 
+===
+
 Version 1.0, what's new?
 
 - Press Ctrl + Shift + Alt + W and holding left mouse button in Maya to call out the modeling extensive marking menu. The marking menu provides a shortcut for many often-used functionality and yet not listed on the conventional one. For example, with the extensive marking menu, you can freeze the transformation by cast a marking menu spell rather than navigating through the menu bar.
@@ -15,6 +17,8 @@ Version 1.0, what's new?
 在1.0扩展标记菜单下，建议使用专家模式以及内置的标记菜单和热盒（Hotbox, 按住空格键）来实现最大的建模效率。
 注意，这个版本的插件只在Maya 2023上测试过。Maya 2018的版本已经在测试当中，之后会放出，并且应该也兼容自Maya 2018以上的版本。
 
+===
+
 How to Install?
 
 - Download the ZIP file in the release section. 
@@ -26,6 +30,8 @@ How to Install?
 - 在发布部分下载ZIP文件。
 - 解压缩文件。
 - 将 "pref "文件夹拖到C:\Users\(Your USER NAME)\Documents\maya\2023 以覆盖现有文件。
+
+===
 
 Feedback is needed! 
 
