@@ -1,0 +1,1339 @@
+//Maya Preference 2023 (Release 1)
+//
+//
+
+runTimeCommand
+	-label ""
+	-annotation "ExtensiveShortcutsUV (Press)"
+	-longAnnotation ""
+	-category "Other items.User Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }\npopupMenu -button 1 -ctl true -alt true -sh true -allowOptionBoxes true -parent `findPanelPopupParent` -mm 1 tempMM; \nsource \"menu_ExtensiveShortcutsUV\";\n")
+	ExtensiveShortcutsUV_Press;
+
+runTimeCommand
+	-label ""
+	-annotation "ExtensiveShortcutsUV (Release)"
+	-longAnnotation ""
+	-category "Other items.User Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }")
+	ExtensiveShortcutsUV_Release;
+
+runTimeCommand
+	-label ""
+	-annotation "ExtensiveShortcuts (Press)"
+	-longAnnotation ""
+	-category "Other items.User Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }\npopupMenu -button 1 -ctl true -alt true -sh true -allowOptionBoxes true -parent `findPanelPopupParent` -mm 1 tempMM; \nsource \"menu_ExtensiveShortcuts\";\n")
+	ExtensiveShortcuts_Press;
+
+runTimeCommand
+	-label ""
+	-annotation "ExtensiveShortcuts (Release)"
+	-longAnnotation ""
+	-category "Other items.User Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("if (`popupMenu -exists tempMM`) { deleteUI tempMM; }")
+	ExtensiveShortcuts_Release;
+
+runTimeCommand
+	-label ""
+	-annotation "Show/Hide UI"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.UI"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    import gs_toolbox.main as tb_main;tb_main.main()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Show_Hide_UI;
+
+runTimeCommand
+	-label ""
+	-annotation "Reset the UI to Defaults"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.UI"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    import gs_toolbox.utils.utils as tb_ut;from imp import reload;reload(tb_ut);tb_ut.resetUI()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Reset_To_Defaults;
+
+runTimeCommand
+	-label ""
+	-annotation "Close the UI and Stop Scripts"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.UI"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    import gs_toolbox.utils.utils as tb_ut;from imp import reload;reload(tb_ut);tb_ut.stopUI()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Stop_UI;
+
+runTimeCommand
+	-label ""
+	-annotation "Update Selection Groups"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Options"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interface.selectionSets()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Update_Selection_Groups;
+
+runTimeCommand
+	-label ""
+	-annotation "Clear Selection Groups"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Options"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.sets.cleanup()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Clear_Selection_Groups;
+
+runTimeCommand
+	-label ""
+	-annotation "Clear Custom Materials"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Options"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.materials.clear()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Clear_Custom_Materials;
+
+runTimeCommand
+	-label ""
+	-annotation "Toggle Wireframe of Selected Mesh"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interface.toggleWireframe()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Toggle_Wireframe;
+
+runTimeCommand
+	-label ""
+	-annotation "Toggle Reference of Selected Mesh"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interface.toggleReference()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Toggle_Reference;
+
+runTimeCommand
+	-label ""
+	-annotation "Toggle Transform Constraints"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.constraints.toggleTrans()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Toggle_Transform;
+
+runTimeCommand
+	-label ""
+	-annotation "Toggle Selection Constraints"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.constraints.toggleFlatPlane()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Toggle_Selection;
+
+runTimeCommand
+	-label ""
+	-annotation "Select Edges by Angle"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.selection.byAngle()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Select_Edges;
+
+runTimeCommand
+	-label ""
+	-annotation "Select Border Edges"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.selection.border()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Select_Border_Edge;
+
+runTimeCommand
+	-label ""
+	-annotation "Select N-Gons"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.selection.ngons()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Select_NGons;
+
+runTimeCommand
+	-label ""
+	-annotation "Select Hard Edges"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.selection.hardEdges()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Select_Hard_Edges;
+
+runTimeCommand
+	-label ""
+	-annotation "Dot Select Components"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.dotSelect.main(hk=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Dot_Select_Next;
+
+runTimeCommand
+	-label ""
+	-annotation "Dot Select Components"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Selection/Visibility"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.dotSelect.main(hk=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Dot_Select_Loop;
+
+runTimeCommand
+	-label ""
+	-annotation "Creases Selected Edge"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.crease(1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Crease_Edge;
+
+runTimeCommand
+	-label ""
+	-annotation "UnCreases Selected Edge"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.crease(0)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_UnCrease_Edge;
+
+runTimeCommand
+	-label ""
+	-annotation "Changes the SubD Level"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.changeSubD()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Change_SubD;
+
+runTimeCommand
+	-label ""
+	-annotation "Applies Crease by Angle"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.creasePlus()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Crease_Plus;
+
+runTimeCommand
+	-label ""
+	-annotation "UnCreases All Edges"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.unCreasePlus()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_UnCrease_Plus;
+
+runTimeCommand
+	-label ""
+	-annotation "Bevel by Angle"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.bevelPlus()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Bevel_Plus;
+
+runTimeCommand
+	-label ""
+	-annotation "Create Crease Sets from Mesh"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.createCreaseSets()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Create_Crease_Sets;
+
+runTimeCommand
+	-label ""
+	-annotation "Bake Crease Sets to Mesh"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.bakeSets()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Bake_Crease_Sets;
+
+runTimeCommand
+	-label ""
+	-annotation "Convert Creases to Bevels"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Creasing/Beveling"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.creasing.creaseToBevel()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Creases_to_Bevels;
+
+runTimeCommand
+	-label ""
+	-annotation "Mirror on X"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(0,0,mode=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Mirror_X;
+
+runTimeCommand
+	-label ""
+	-annotation "Mirror on Y"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(1,0,mode=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Mirror_Y;
+
+runTimeCommand
+	-label ""
+	-annotation "Mirror on Z"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(2,0,mode=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Mirror_Z;
+
+runTimeCommand
+	-label ""
+	-annotation "Mirror on -X"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(0,1,mode=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Mirror_mX;
+
+runTimeCommand
+	-label ""
+	-annotation "Mirror on -Y"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(1,1,mode=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Mirror_mY;
+
+runTimeCommand
+	-label ""
+	-annotation "Mirror on -Z"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(2,1,mode=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Mirror_mZ;
+
+runTimeCommand
+	-label ""
+	-annotation "Flip on X"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(0,0,mode=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flip_X;
+
+runTimeCommand
+	-label ""
+	-annotation "Flip on Y"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(1,0,mode=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flip_Y;
+
+runTimeCommand
+	-label ""
+	-annotation "Flip on Z"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(2,0,mode=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flip_Z;
+
+runTimeCommand
+	-label ""
+	-annotation "Instance on X"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(0,0,mode=3)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Instance_X;
+
+runTimeCommand
+	-label ""
+	-annotation "Instance on Y"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(1,0,mode=3)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Instance_Y;
+
+runTimeCommand
+	-label ""
+	-annotation "Instance on Z"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Mirroring"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.mirroring.mirrorCmd(2,0,mode=3)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Instance_Z;
+
+runTimeCommand
+	-label ""
+	-annotation "Create Linear Array"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Arrays"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.array.arraySwitch(\"linear\",0,1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Linear_Array_Create;
+
+runTimeCommand
+	-label ""
+	-annotation "Create Radial Array"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Arrays"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.array.arraySwitch(\"radial\",0,0,1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Radial_Array_Create;
+
+runTimeCommand
+	-label ""
+	-annotation "Add to Array"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Arrays"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.array.addMesh()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Add_to_Array;
+
+runTimeCommand
+	-label ""
+	-annotation "Remove From Array"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Arrays"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.array.removeMesh()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Remove_from_Array;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Array"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Arrays"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.array.apply()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Apply_Array;
+
+runTimeCommand
+	-label ""
+	-annotation "Creates Instances"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Instancing"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.instancing.instance(1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Create_Instances;
+
+runTimeCommand
+	-label ""
+	-annotation "Creates Instance Plus"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Instancing"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.instancing.instancePlus()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Create_Instance_Plus;
+
+runTimeCommand
+	-label ""
+	-annotation "Stores Poly Edits"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.History"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.storePolyEdits()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Store_Edits;
+
+runTimeCommand
+	-label ""
+	-annotation "Deletes Last History Node"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.History"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.deleteNode(hk=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Delete_Nodes;
+
+runTimeCommand
+	-label ""
+	-annotation "Deletes Last History Node"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.History"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.deleteNode(hk=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Delete_Nodes_Selected;
+
+runTimeCommand
+	-label ""
+	-annotation "Creates a History Snapshot"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.History"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.snapshot(hk=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Create_Snapshot;
+
+runTimeCommand
+	-label ""
+	-annotation "Creates a History Snapshot and Deletes History"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.History"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.snapshot(hk=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Create_Snapshot_Delete;
+
+runTimeCommand
+	-label ""
+	-annotation "Extracts a History Snapshot"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.History"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.extractSnapshot(hk=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Extract_Snapshot;
+
+runTimeCommand
+	-label ""
+	-annotation "Extracts a History Snapshot and Deletes"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.History"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.extractSnapshot(hk=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Extract_Snapshot_Delete;
+
+runTimeCommand
+	-label ""
+	-annotation "Snaps Objects to Polygon"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.snapToPolySwitch(hk=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Snap_to_Poly;
+
+runTimeCommand
+	-label ""
+	-annotation "Snaps Objects to Polygon"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.snapToPolySwitch(hk=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Snap_to_Poly_Freeze;
+
+runTimeCommand
+	-label ""
+	-annotation "Creates Solidify Modifier"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.solidify()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Solidify;
+
+runTimeCommand
+	-label ""
+	-annotation "Straightens the Selected Edges by Projection"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.mainCMD(1,hk=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Straighten_Project;
+
+runTimeCommand
+	-label ""
+	-annotation "Straightens the Selected Edges by Equalization"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.mainCMD(1,hk=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Straighten_Equalize;
+
+runTimeCommand
+	-label ""
+	-annotation "Flattens Selection in Local Space"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.flattenSelection([0, 1, 1], 0)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flatten_Local_X;
+
+runTimeCommand
+	-label ""
+	-annotation "Flattens Selection in Local Space"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.flattenSelection([1, 0, 1], 0)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flatten_Local_Y;
+
+runTimeCommand
+	-label ""
+	-annotation "Flattens Selection in Local Space"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.flattenSelection([1, 1, 0], 0)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flatten_Local_Z;
+
+runTimeCommand
+	-label ""
+	-annotation "Flattens Selection in World Space"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.flattenSelection([0, 1, 1], 1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flaten_World_X;
+
+runTimeCommand
+	-label ""
+	-annotation "Flattens Selection in World Space"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.flattenSelection([1, 0, 1], 1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flaten_World_Y;
+
+runTimeCommand
+	-label ""
+	-annotation "Flattens Selection in World Space"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.flattenSelection([1, 1, 0], 1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Flaten_World_Z;
+
+runTimeCommand
+	-label ""
+	-annotation "Interpolates the Selected Edges"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.mainCMD(2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Interpolate;
+
+runTimeCommand
+	-label ""
+	-annotation "Smooths the Selected Edges"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.interpolate.mainCMD(3)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Smooth;
+
+runTimeCommand
+	-label ""
+	-annotation "Fills hole with Quads"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.fillWithQuads.main()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Fill;
+
+runTimeCommand
+	-label ""
+	-annotation "Combines selected objects"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.combineObjects()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Combine;
+
+runTimeCommand
+	-label ""
+	-annotation "Combines selected objects"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.separateObjects()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Separate;
+
+runTimeCommand
+	-label ""
+	-annotation "Duplicates Selected Faces"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.duplicateFaces()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Duplicate;
+
+runTimeCommand
+	-label ""
+	-annotation "Extracts Selected Faces"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.extractFaces(hk=1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Extract;
+
+runTimeCommand
+	-label ""
+	-annotation "Extracts Selected Faces and Separates"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Utilities"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.extractFaces(hk=2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Extract_Separate;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Union Boolean Command"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.main(1,1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Boolean_Union;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Union Boolean Command and Hide"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.main(1,2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Boolean_Union_Hide;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Difference Boolean Command"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.main(2,1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Boolean_Difference;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Difference Boolean Command and Hide"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.main(2,2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Boolean_Difference_Hide;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Intersection Boolean Command"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.main(3,1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Boolean_Intersection;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Intersection Boolean Command and Hide"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.main(3,2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Boolean_Intersection_Hide;
+
+runTimeCommand
+	-label ""
+	-annotation "Toggle Boolean Group Visibility"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.showHide()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Toggle_Boolean_Group;
+
+runTimeCommand
+	-label ""
+	-annotation "Show All Cutters"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.showAll()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Show_Cutters;
+
+runTimeCommand
+	-label ""
+	-annotation "Select All Cutters"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.selectAll()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Select_Cutters;
+
+runTimeCommand
+	-label ""
+	-annotation "Delete Selected Cutter"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.delete()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Delete_Cutter;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Boolean Hide"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.cleanup(1)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Apply_Boolean_Hide;
+
+runTimeCommand
+	-label ""
+	-annotation "Apply Boolean Delete"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Booleans"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.booleans.cleanup(2)\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Apply_Boolean_Delete;
+
+runTimeCommand
+	-label ""
+	-annotation "Create Live Plane"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Live_Plane"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.livePlane.helperPlane()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Create_Plane;
+
+runTimeCommand
+	-label ""
+	-annotation "Switches to Live Plane Cam"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Live_Plane"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.livePlane.switchToCam()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Switch_to_Cam;
+
+runTimeCommand
+	-label ""
+	-annotation "Aligns Selected Object to Live Plane"
+	-longAnnotation ""
+	-category "GS.GS_Toolbox.Live_Plane"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import gs_toolbox\ntry:\n    gs_toolbox.core.livePlane.alignToPlane()\nexcept:\n    print(\"This function requires GS Toolbox.\")")
+	GSTB_Align_to_Plane;
+

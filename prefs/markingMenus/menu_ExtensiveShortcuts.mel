@@ -1,0 +1,568 @@
+
+    menuItem
+        -label "Mirror" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "MirrorPolygonGeometry" 
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "W" 
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 1
+        -image "polyMirrorGeometry.png" 
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem1;
+
+    menuItem
+        -label "menuEditorMenuItem2" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "MirrorPolygonGeometryOptions" 
+        -optionBox 1
+        -enable 1
+        -visible 0
+        -data 0
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 0
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem2;
+
+    menuItem
+        -label "Bridge" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "performBridgeOrFill" 
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "E" 
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 1
+        -image "polyBridge.png" 
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem3;
+
+    menuItem
+        -label "menuEditorMenuItem4" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "BridgeEdgeOptions" 
+        -optionBox 1
+        -enable 1
+        -visible 0
+        -data 0
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 0
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem4;
+
+    menuItem
+        -label "Displacement" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "N" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem13;
+
+        menuItem
+            -label "Center Pivot" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "CenterPivot" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "CenterPivot.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "Delete By Type: History" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "DeleteHistory" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "DeleteHistory.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+        menuItem
+            -label "Freeze Transformations" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "FreezeTransformations" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "FreezeTransform.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "BakeCustomPivot" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "performBakeCustomToolPivot 0" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+        menuItem
+            -label "DropPivot" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "string $sel[]= `ls -sl`;\n\n    //$sel[0] != \"\" to check if the first item is empty, but `size $sel` == 1 already cover that\n    if(`size $sel` > 0)\n    {\n        int $vtxIdx;\n        int $vCount[];\n        float $lowestY = 2147483647.0;\n        float  $crtY = 0.0;\n        float $pos[];\n\n        string $item;\n        for ($item in $sel)\n        {\n            $vCount = `polyEvaluate -vertex $item`; //Get vertex count\n            for ($vtxIdx = 0; $vtxIdx < $vCount[0]; $vtxIdx++)//Loop through vetex\n            {\n                $pos = `xform -q -ws -t ($item+\".vtx[\"+$vtxIdx+\"]\")`;//Get vertex position\n                $crtY = $pos[1];\n                if($crtY < $lowestY)\n                {\n                    $lowestY = $crtY;//Get the lowest Y\n                }\n            }\n            $pos = `xform -q -ws -t ($item)`;\n            xform -ws -a -piv $pos[0] $lowestY $pos[2] ($item);\n            print ($lowestY);\n        }\n\n    }" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
+        menuItem
+            -label "Align Tool" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "setToolTo alignToolCtx" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+        menuItem
+            -label "Align Objects XYZ" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "align -atl -x Mid -y Mid -z Mid" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
+
+        menuItem
+            -label "SetToFace" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "expandPolyGroupSelection;polySetToFaceNormal" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem7;
+
+    setParent -m ..;
+
+    menuItem
+        -label "FillHole" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "polyPerformAction polyCloseBorder e 0" 
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "NE" 
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 1
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem14;
+
+    menuItem
+        -label "Smooth" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "SmoothPolygon" 
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "NW" 
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 1
+        -image "polySmooth.png" 
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem9;
+
+    menuItem
+        -label "menuEditorMenuItem10" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "SmoothPolygonOptions" 
+        -optionBox 1
+        -enable 1
+        -visible 0
+        -data 0
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 0
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem15;
+
+    menuItem
+        -label "ElementsOperation" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "SW" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem16;
+
+        menuItem
+            -label "Combine" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "CombinePolygons" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyUnite.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "menuEditorMenuItem2" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "CombinePolygonsOptions" 
+            -optionBox 1
+            -enable 1
+            -visible 0
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+        menuItem
+            -label "Duplicate" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "DuplicateFace" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyDuplicateFacet.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "menuEditorMenuItem4" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "DuplicateFaceOptions" 
+            -optionBox 1
+            -enable 1
+            -visible 0
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+        menuItem
+            -label "Extract" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ExtractFace" 
+            -optionBox 0
+            -enable 1
+            -visible 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyChipOff.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+        menuItem
+            -label "menuEditorMenuItem6" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ExtractFaceOptions" 
+            -optionBox 1
+            -enable 1
+            -visible 0
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Lattice" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "pythonRunTimeCommand ffd.cmd_create 0" 
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "SE" 
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 1
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem18;
+
+    menuItem
+        -label "menuEditorMenuItem19" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "pythonRunTimeCommand ffd.cmd_create 1" 
+        -optionBox 1
+        -enable 1
+        -visible 0
+        -data 0
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 0
+        -echoCommand 0
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem19;
+
+    menuItem
+        -label "DuplicateSpecial" 
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "performDuplicateSpecial false" 
+        -optionBox 0
+        -enable 1
+        -visible 1
+        -data 0
+        -radialPosition "S" 
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 1
+        -echoCommand 0
+        -italicized 0
+        -boldFont 0
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem5;
+
+    menuItem
+        -divider 0
+        -subMenu 0
+        -tearOff 0
+        -command "performDuplicateSpecial true" 
+        -optionBox 1
+        -enable 1
+        -visible 0
+        -data 0
+        -allowOptionBoxes 1
+        -postMenuCommandOnce 0
+        -enableCommandRepeat 0
+        -echoCommand 0
+        -italicized 0
+        -boldFont 0
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem6;
+
+setParent -m ..;
+

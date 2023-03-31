@@ -1,0 +1,40 @@
+//Maya Preference 2023 (Release 1)
+//
+//
+
+nameCommand
+	-annotation "UngroupNameCommand"
+	-sourceType "mel"
+	-command ("Ungroup")
+	UngroupNameCommand;
+
+nameCommand
+	-annotation "dR_connectToolNameCommand"
+	-sourceType "mel"
+	-command ("dR_connectTool")
+	dR_connectToolNameCommand;
+
+nameCommand
+	-annotation "ExtensiveShortcutsUV_PressNameCommand"
+	-sourceType "mel"
+	-command ("ExtensiveShortcutsUV_Press")
+	ExtensiveShortcutsUV_PressNameCommand;
+
+nameCommand
+	-annotation "ExtensiveShortcutsUV_ReleaseNameCommand"
+	-sourceType "mel"
+	-command ("ExtensiveShortcutsUV_Release")
+	ExtensiveShortcutsUV_ReleaseNameCommand;
+
+nameCommand
+	-annotation "ExtensiveShortcuts_PressNameCommand"
+	-sourceType "mel"
+	-command ("ExtensiveShortcuts_Press")
+	ExtensiveShortcuts_PressNameCommand;
+
+nameCommand
+	-annotation "ExtensiveShortcuts_ReleaseNameCommand"
+	-sourceType "mel"
+	-command ("ExtensiveShortcuts_Release")
+	ExtensiveShortcuts_ReleaseNameCommand;
+

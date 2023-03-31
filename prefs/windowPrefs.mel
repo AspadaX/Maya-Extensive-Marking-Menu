@@ -1,0 +1,40 @@
+//Maya Preference 2023 (Release 1)
+//
+//
+windowPref -topLeftCorner 225 150 -widthHeight 250 400 -maximized true -parentMain true outlinerPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized true -parentMain true hyperGraphPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true graphEditor1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 1400 400 -maximized true -parentMain true timeEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true dopeSheetPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 1040 600 -maximized true -parentMain true nodeEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true shapePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 1040 600 -maximized true -parentMain true posePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized true -parentMain true clipEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 524 470 -maximized true -parentMain true devicePanel1Window;
+windowPref -topLeftCorner 75 75 -widthHeight 1440 900 -maximized true -parentMain true hyperShadePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized true -parentMain true dynPaintScriptedPanelWindow;
+windowPref -topLeftCorner 250 200 -widthHeight 550 562 -maximized true -parentMain true blindDataEditor1Window;
+windowPref -topLeftCorner 150 200 -widthHeight 1120 640 -maximized true -parentMain true polyTexturePlacementPanel1Window;
+windowPref -topLeftCorner 235 230 -widthHeight 1000 495 -maximized true -parentMain true contentBrowserPanel1Window;
+windowPref -topLeftCorner -8 -1 -widthHeight 1280 1024 -maximized true -parentMain false MayaWindow;
+windowPref -topLeftCorner 217 899 -widthHeight 546 350 -maximized false -parentMain true OptionBoxWindow;
+windowPref -topLeftCorner 346 640 -widthHeight 500 500 -maximized false -parentMain true FbxWarningWindow;
+windowPref -topLeftCorner 346 640 -widthHeight 600 300 -maximized false -parentMain true Hard_Mesh_Operation;
+windowPref -topLeftCorner 346 640 -widthHeight 300 730 -maximized false -parentMain true assignNewMaterialWindow;
+windowPref -topLeftCorner 252 301 -widthHeight 817 531 -maximized false -parentMain true PreferencesWindow;
+windowPref -topLeftCorner 448 1291 -widthHeight 500 491 -maximized false -parentMain true markingMenuEditorWnd;
+windowPref -topLeftCorner 59 143 -widthHeight 1332 700 -maximized false -parentMain true HotkeyEditor;
+windowPref -topLeftCorner 136 1016 -widthHeight 511 697 -maximized false -parentMain true MMEditorWnd_ExtensiveShortcutsUV;
+windowPref -topLeftCorner 144 1319 -widthHeight 469 697 -maximized false -parentMain true MMEditorWnd_ExtensiveShortcuts;
+windowPref -topLeftCorner 319 749 -widthHeight 322 598 -maximized false -parentMain true win_SW_0;
+windowPref -topLeftCorner 346 640 -widthHeight 380 730 -maximized false -parentMain true createRenderNodeWindow;
+windowPref -topLeftCorner 346 640 -widthHeight 322 598 -maximized false -parentMain true win_None_1;
+windowPref -topLeftCorner 346 640 -widthHeight 322 598 -maximized false -parentMain true win_E_0;
+windowPref -topLeftCorner 346 640 -widthHeight 322 598 -maximized false -parentMain true win_W_0;
+windowPref -topLeftCorner 346 640 -widthHeight 322 531 -maximized false -parentMain true win_N_0;
+windowPref -topLeftCorner 353 845 -widthHeight 322 598 -maximized false -parentMain true win_S_0;
+windowPref -topLeftCorner 346 640 -widthHeight 405 438 -maximized false -parentMain true Viewport20OptionsWindow;
+windowPref -topLeftCorner 346 640 -widthHeight 256 262 -maximized false -parentMain true uvSetEditor;
+windowPref -topLeftCorner 346 640 -widthHeight 620 540 -maximized false -parentMain true expressionEditorWin;
+windowPref -topLeftCorner 331 676 -widthHeight 322 598 -maximized false -parentMain true win_NE_0;
+windowPref -topLeftCorner 346 640 -widthHeight 218 100 -maximized false -parentMain true win_SE_0;

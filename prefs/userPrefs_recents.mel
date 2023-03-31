@@ -1,0 +1,32 @@
+//Maya Preference 2023 (Release 1)
+//
+//
+
+optionVar -version 3;
+
+// RecentFiles
+optionVar -cat "RecentFiles"
+ -sa "RecentFilesList"
+ -sva "RecentFilesList" "D:/WORKS/2023/20230322淮安板闸遗址公园投影秀/MAYA2023/ironBull_01.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/20230316德寿宫数字展陈/20230316/宫女_skin_插花/MAYA_2023/palaceLady_02.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/20230322淮安板闸遗址公园投影秀/20230322/ironBull/MAYA2023/ironBull_01.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/20230322淮安板闸遗址公园投影秀/20230324/sculptureChaoTianHou_01/MAYA2023/sculptureChaoTianHou_01.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/0919甘肃武威沉浸式演出/20230327/tower_01/MAYA_2023/tower_01_02.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/0919甘肃武威沉浸式演出/20230327/tower_02/MAYA_2023/tower_02_02.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/0919甘肃武威沉浸式演出/20230327/tower_02/MAYA_2023/tower_02.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/0919甘肃武威沉浸式演出/20230327/tower_01/MAYA_2023/tower_01.mb"
+ -sva "RecentFilesList" "D:/WORKS/2023/0919甘肃武威沉浸式演出/20230327/tower_01/MAYA_2023/tower_01_03.mb"
+ -sva "RecentFilesList" "C:/Users/xy17/Practices/dragon_01/MAYA_2023/dragon_01.mb"
+ -sa "RecentFilesTypeList"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ -sva "RecentFilesTypeList" "mayaBinary"
+ ;
+
