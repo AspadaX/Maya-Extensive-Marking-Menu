@@ -7,7 +7,7 @@ How to Install?
 
 - Download the ZIP file in the release section. 
 - Unzip the file. 
-- Drag the "pref" folder to C:\Users\(YOUR USER NAME)\Documents\maya\2023 to overwrite the existing files. 
+- Drag the "pref" folder to C:\Users\\(YOUR USER NAME)\Documents\maya\2023 to overwrite the existing files. 
 
 如何安装？
 
