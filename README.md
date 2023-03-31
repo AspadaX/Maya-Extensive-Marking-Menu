@@ -29,7 +29,7 @@ It is aimed to greatly improve the modeling efficiency of Maya by taking the ben
 
 Version 1.0, what's new?
 
-- Press Ctrl + Shift + Alt + W and holding left mouse button in Maya to call out the modeling extensive marking menu. The marking menu provides a shortcut for many often-used functionality and yet not listed on the conventional one. For example, with the extensive marking menu, you can freeze the transformation by cast a marking menu spell rather than navigating through the menu bar.
+- Press Ctrl + Shift + Alt + W and holding left mouse button in Maya to call out the modeling extensive marking menu. The marking menu provides a shortcut for many often-used functionalities and yet not listed on the built-in one. For example, with the extensive marking menu, you can freeze the transformation by cast a marking menu spell rather than navigating through the menu bar.
 - Press Ctrl + Shift + Alt + E and holding left mouse button in Maya to call out the UV extensive marking menu, which allows users to edit UVs in the 3D viewport instead of moving back and forth between the UV editor and the viewport.
 - With the 1.0 extensive marking menu, it is recommended to use the expert mode along with the built-in marking menus and the hotbox (holding down the Space button) to achieve the maxmized modeling efficiency.
 - ATTENTION: This release is only tested on Maya 2023. A Maya 2018 version of the plugin will be released later once it is tested to work. The Maya 2018 version should be able to support anything beyond.
