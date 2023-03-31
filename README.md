@@ -13,7 +13,7 @@ How to Install?
 
 - 在发布部分下载ZIP文件。
 - 解压缩文件。
-- 将 "pref "文件夹拖到C:\Users\(Your USER NAME)\Documents\maya\2023 以覆盖现有文件。
+- 将 "pref "文件夹拖到C:\Users\\(Your USER NAME)\Documents\maya\2023 以覆盖现有文件。
 
 ===
 
