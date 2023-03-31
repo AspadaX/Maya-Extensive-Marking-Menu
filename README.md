@@ -1,4 +1,4 @@
-# ExtensiveMarkingMenu_forMaya
+# Extensive Marking Menu for Maya
 Wanna greater efficiency when modeling in Maya? Try this out!
 
 ===
