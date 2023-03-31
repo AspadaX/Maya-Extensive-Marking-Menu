@@ -3,6 +3,30 @@ Wanna greater efficiency when modeling in Maya? Try this out!
 
 ===
 
+How to Install?
+
+- Download the ZIP file in the release section. 
+- Unzip the file. 
+- Drag the "pref" folder to C:\Users\(YOUR USER NAME)\Documents\maya\2023 to overwrite the existing files. 
+
+如何安装？
+
+- 在发布部分下载ZIP文件。
+- 解压缩文件。
+- 将 "pref "文件夹拖到C:\Users\(Your USER NAME)\Documents\maya\2023 以覆盖现有文件。
+
+===
+
+The Goal of This Project
+
+It is aimed to greatly improve the modeling efficiency of Maya by taking the benefits of Maya's marking menu feature. 
+
+本项目的目标
+
+本项目旨在通过利用Maya的标记菜单功能，大大提升Maya的建模效率。
+
+===
+
 Version 1.0, what's new?
 
 - Press Ctrl + Shift + Alt + W and holding left mouse button in Maya to call out the modeling extensive marking menu. The marking menu provides a shortcut for many often-used functionality and yet not listed on the conventional one. For example, with the extensive marking menu, you can freeze the transformation by cast a marking menu spell rather than navigating through the menu bar.
@@ -16,20 +40,6 @@ Version 1.0, what's new?
 在Maya中按下Ctrl + Shift + Alt + E并按住鼠标左键可以呼出UV扩展标记菜单，它允许用户在3D视口中编辑UV，而不是在UV编辑器和视口之间来回切换。
 在1.0扩展标记菜单下，建议使用专家模式以及内置的标记菜单和热盒（Hotbox, 按住空格键）来实现最大的建模效率。
 注意，这个版本的插件只在Maya 2023上测试过。Maya 2018的版本已经在测试当中，之后会放出，并且应该也兼容自Maya 2018以上的版本。
-
-===
-
-How to Install?
-
-- Download the ZIP file in the release section. 
-- Unzip the file. 
-- Drag the "pref" folder to C:\Users\(YOUR USER NAME)\Documents\maya\2023 to overwrite the existing files. 
-
-如何安装？
-
-- 在发布部分下载ZIP文件。
-- 解压缩文件。
-- 将 "pref "文件夹拖到C:\Users\(Your USER NAME)\Documents\maya\2023 以覆盖现有文件。
 
 ===
 
